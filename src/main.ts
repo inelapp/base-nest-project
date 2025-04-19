@@ -1,7 +1,6 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import { AllExceptionFilter } from './core/middlewares/all-exception.filter';
-import { ResponseInterceptor } from './core/middlewares/response.interceptor';
+import { AllExceptionFilter, ResponseInterceptor } from './core';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { patchNestJsSwagger } from 'nestjs-zod';
 

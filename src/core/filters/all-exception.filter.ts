@@ -13,7 +13,7 @@ export class AllExceptionFilter implements ExceptionFilter {
       error: exception.message || 'Internal server error',
       statusCode: status,
       type: exception.constructor.name,
-      path: request.url,
+      path: request.originalUrl,
     }
 
     response.status(status).json(errorResponse);
